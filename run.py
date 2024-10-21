@@ -29,6 +29,15 @@ def generate_ascii_art(text, style):
     fig = pyfiglet.Figlet(font=style)
     return fig.renderText(text)
 
+# Get valid font style input
+def get_valid_style():
+    all_styles = [font for fonts in font_categories.values() for font in fonts] + ['random']
+    while True:
+        style = input("Enter the style you want to use (or type 'random' for a random style): ")
+        if style in all_styles:
+            return style
+        print("Invalid style. Please try again.")
+
 def main():
     while True:
         print("Welcome to the ASCII Art Generator!")
@@ -37,9 +46,11 @@ def main():
 
         list_categories()
 
-        # User inputs for text and desired font style
+        # User input for desired text
         text = input("\nEnter the text you want to convert to ASCII art: ")
-        style = input("Enter the style you want to use (or type 'random' for a random style): ")
+
+        # Get a valid style input
+        style = get_valid_style()
 
         # Random font choice
         if style.lower() == 'random':
@@ -55,7 +66,7 @@ def main():
             print(f"An error occurred: {e}. Please make sure you entered a valid style.")
 
         # Ask if the user wants to try again
-        retry = input("\nHope you liked it!\nDo you want to try again? ('y' or any other key to exit): ").lower()
+        retry = input("Hope you liked it!\nDo you want to try again? ('y' or any other key to exit): ").lower()
         if retry != 'y':
             print("Thank you for using the ASCII Art Generator! Goodbye!")
             break
