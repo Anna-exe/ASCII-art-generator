@@ -41,7 +41,16 @@ def main():
     text = input("\nEnter the text you want to convert to ASCII art: ")
     style = input("Enter the style you want to use (or type 'random' for a random style): ")
 
+    # Random font choice
     if style.lower() == 'random':
         style = get_random_style()
         print(f"Randomly selected style: {style}")
+    
+    # Generate font from listed font styles
+    try:
+        ascii_art = generate_ascii_art(text, style)
+        print("\nGenerated ASCII Art:\n")
+        print(ascii_art)
+    except Exception as e:
+        print(f"An error occurred: {e}. Please make sure you entered a valid style.")
 main()
