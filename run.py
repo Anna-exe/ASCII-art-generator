@@ -55,8 +55,11 @@ def main():
             print(f"An error occurred: {e}. Please make sure you entered a valid style.")
 
         # Ask if the user wants to try again
-        retry = input("\nDo you want to try again? (y/n): ").lower()
-        if retry != 'y':
+        retry = input("\nDo you want to try again? (Y): ").lower()
+        if retry == 'y':
+            print("I see you are enjoying it.")
+            main()
+        else:
             print("Thank you for using the ASCII Art Generator! Goodbye!")
             break
 main()
