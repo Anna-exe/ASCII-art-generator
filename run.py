@@ -37,4 +37,7 @@ def main():
 
     list_categories()
 
+    # User inputs for text and desired font style
+    text = input("\nEnter the text you want to convert to ASCII art: ")
+    style = input("Enter the style you want to use (or type 'random' for a random style): ")
 main()
