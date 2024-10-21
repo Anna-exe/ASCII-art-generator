@@ -1,7 +1,10 @@
-# Import ASCII font art library
+# Import of libraries
 import pyfiglet
-# Import randomizer
 import random
+from colorama import Fore, Style, init
+
+# Initialize colorama
+init(autoreset=True)
 
 # Categorizing font styles
 font_categories = {
