@@ -18,10 +18,16 @@ def list_categories():
     for category, fonts in font_categories.items():
         print(f"\n{category}:")
         print(", ".join(fonts))
-
+        
+# Random font style choice
 def get_random_style():
     all_styles = [font for fonts in font_categories.values() for font in fonts]
     return random.choice(all_styles)
+
+# Font transformation
+def generate_ascii_art(text, style):
+    fig = pyfiglet.Figlet(font=style)
+    return fig.renderText(text)
 
 def main():
 
