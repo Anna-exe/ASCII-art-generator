@@ -17,10 +17,10 @@ font_categories = {
 
 # List available categories and styles
 def list_categories():
-    print("Available font categories:")
+    print(Fore.CYAN + "Available font categories:")
     for category, fonts in font_categories.items():
-        print(f"\n{category}:")
-        print(", ".join(fonts))
+        print(f"\n{Fore.GREEN}{category}:")
+        print(", ".join(Fore.YELLOW + font for font in fonts))
         
 # Random font style choice
 def get_random_style():
