@@ -25,7 +25,7 @@ def get_random_style():
 
 def main():
 
-    print("Welcome to text the ASCII Art Generator!")
+    print("Welcome to the ASCII Art Generator!")
     print("You can use it to add style to footer of your emails or as banners in forums")
     print()
 
