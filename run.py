@@ -10,11 +10,19 @@ font_categories = {
     "My Favourites": ["poison", "smkeyboard", "fraktur", "katakana", "mono12"]
 }
 
+# List available categories and styles
+def list_categories():
+    print("Available font categories:")
+    for category, fonts in font_categories.items():
+        print(f"\n{category}:")
+        print(", ".join(fonts))
+
 def main():
 
-    print("Welcome to text art generator!")
+    print("Welcome to text the ASCII Art Generator!")
     print("You can use it to add style to footer of your emails or as banners in forums")
     print()
 
+    list_categories()
 
 main()
