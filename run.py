@@ -1,5 +1,7 @@
 # Import ASCII font art library
 import pyfiglet
+# Import randomizer
+import random
 
 # Categorizing font styles
 font_categories = {
@@ -16,6 +18,10 @@ def list_categories():
     for category, fonts in font_categories.items():
         print(f"\n{category}:")
         print(", ".join(fonts))
+
+def get_random_style():
+    all_styles = [font for fonts in font_categories.values() for font in fonts]
+    return random.choice(all_styles)
 
 def main():
 
