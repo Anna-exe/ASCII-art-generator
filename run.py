@@ -49,17 +49,14 @@ def main():
         # Generate font from listed font styles
         try:
             ascii_art = generate_ascii_art(text, style)
-            print("\nGenerated ASCII Art:\n")
+            print("\nGenerating the best ASCII art for you...\n")
             print(ascii_art)
         except Exception as e:
             print(f"An error occurred: {e}. Please make sure you entered a valid style.")
 
         # Ask if the user wants to try again
-        retry = input("\nDo you want to try again? (Y): ").lower()
-        if retry == 'y':
-            print("I see you are enjoying it.")
-            main()
-        else:
+        retry = input("\nHope you liked it!\nDo you want to try again? ('y' or any other key to exit): ").lower()
+        if retry != 'y':
             print("Thank you for using the ASCII Art Generator! Goodbye!")
             break
 main()
