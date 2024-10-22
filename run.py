@@ -34,22 +34,22 @@ def generate_ascii_art(text, style):
     fig = pyfiglet.Figlet(font=style)
     return fig.renderText(text)
 
-# Get valid font style input
+# Get valid font style input (uses precomputed 'all_styles')
 def get_valid_style():
-    all_styles = [font for fonts in font_categories.values() for font in fonts] + ['random']
     while True:
         style = input(Fore.BLUE + "Enter the style you want to use (or type 'random' for a random style): ")
-        if style in all_styles:
+        if style in all_styles + ['random']:
             return style
-        print(Fore.RED + "Invalid style. Please try again.")
+        print(Fore.RED + "Invalid style. Available categories and styles are listed below:")
+        list_categories()
 
 def main():
+    print(Fore.MAGENTA + """Welcome to the ASCII Art Generator!
+    You can use it to add style to footer of your emails or as banners in forums
+    """)
+    
     while True:
-        print(Fore.MAGENTA + """Welcome to the ASCII Art Generator!
-        You can use it to add style to footer of your emails or as banners in forums
-        """)
-        print()
-
+        # List font categories at the beginning
         list_categories()
 
         # User input for desired text
@@ -63,7 +63,7 @@ def main():
             style = get_random_style()
             print(Fore.CYAN + f"Randomly selected style: {style}")
         
-        # Generate font from listed font styles
+        # Generate ASCII art and display it
         try:
             ascii_art = generate_ascii_art(text, style)
             print(Fore.LIGHTWHITE_EX + "\nGenerating the best ASCII art for you...\n")
@@ -76,4 +76,5 @@ def main():
         if retry != 'y':
             print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!")
             break
+        
 main()
