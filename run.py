@@ -12,7 +12,7 @@ font_categories = {
     "Script": ["script", "dancing", "nvscript", "starwars"],
     "Fancy": ["3d", "big", "block", "puffy"],
     "Comic": ["cheese", "cyberlarge", "ghost", "larry3d"],
-    "My Favourites": ["poison", "smkeyboard", "fraktur", "mono12"]
+    "My Favourites": ["poison", "smkeyboard", "fraktur", "bloody"]
 }
 
 # Precompute all available styles once at the start
