@@ -9,9 +9,9 @@ init(autoreset=True)
 # Categorizing font styles
 font_categories = {
     "Basic": ["standard", "slant", "banner", "doom"],
-    "Script": ["script", "dancing", "nvscript", "starwars"],
-    "Fancy": ["3d", "big", "block", "puffy"],
-    "Comic": ["cheese", "cyberlarge", "ghost", "larry3d"],
+    "Script": ["script", "invita", "nvscript", "starwars"],
+    "Fancy": ["alligator", "big", "block", "puffy"],
+    "Comic": ["avatar", "cyberlarge", "ghost", "larry3d"],
     "My Favourites": ["poison", "smkeyboard", "fraktur", "bloody"]
 }
 
@@ -80,7 +80,7 @@ def main():
         # Generate ASCII art and display it with a rainbow gradient
         try:
             ascii_art = generate_ascii_art(text, style)
-            print(Fore.LIGHTWHITE_EX + "\nGenerating the best ASCII art for you...\n")
+            print(Fore.YELLOW + "\nGenerating the best ASCII art for you...\n")
             
             # Apply rainbow gradient to the ASCII art
             rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
@@ -94,5 +94,4 @@ def main():
         if retry != 'y':
             print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!")
             break
-
 main()
