@@ -18,6 +18,20 @@ font_categories = {
 # Precompute all available styles once at the start
 all_styles = [font for fonts in font_categories.values() for font in fonts]
 
+# Define rainbow colors in sequence
+rainbow_colors = [Fore.RED, Fore.YELLOW, Fore.GREEN, Fore.CYAN, Fore.BLUE, Fore.MAGENTA]
+
+# Function to apply rainbow colors to text
+def apply_rainbow_gradient(text):
+    colored_text = ""
+    color_count = len(rainbow_colors)
+    
+    # Loop through each character and apply a rainbow color sequentially
+    for i, char in enumerate(text):
+        colored_text += rainbow_colors[i % color_count] + char
+    
+    return colored_text
+
 # List available categories and styles
 def list_categories():
     print(Fore.CYAN + "Available font categories:")
@@ -52,22 +66,26 @@ def main():
         # List font categories at the beginning
         list_categories()
 
-        # User input for desired text
-        text = input(Fore.BLUE + "\nEnter the text you want to convert to ASCII art: ")
-
-        # Get a valid style input
+        # Get a valid style input first
         style = get_valid_style()
 
         # Random font choice
         if style.lower() == 'random':
             style = get_random_style()
             print(Fore.CYAN + f"Randomly selected style: {style}")
-        
-        # Generate ASCII art and display it
+
+        # Then, user input for desired text
+        text = input(Fore.BLUE + "\nEnter the text you want to convert to ASCII art: ")
+
+        # Generate ASCII art and display it with a rainbow gradient
         try:
             ascii_art = generate_ascii_art(text, style)
             print(Fore.LIGHTWHITE_EX + "\nGenerating the best ASCII art for you...\n")
-            print(ascii_art)
+            
+            # Apply rainbow gradient to the ASCII art
+            rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
+            print(rainbow_ascii_art)
+            
         except Exception as e:
             print(Fore.RED + f"An error occurred: {e}. Please make sure you entered a valid style.")
 
@@ -76,5 +94,5 @@ def main():
         if retry != 'y':
             print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!")
             break
-        
+
 main()
