@@ -85,6 +85,7 @@ def main():
             # Apply rainbow gradient to the ASCII art
             rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
             print(rainbow_ascii_art)
+            print(Fore.YELLOW + "***Hint: To display your ASCII art properly, use fonts with equal amount of spaces between characters like 'Fixed width' in Gmail and 'Miriam Fixed' in Word")
             
         except Exception as e:
             print(Fore.RED + f"An error occurred: {e}. Please make sure you entered a valid style.")
