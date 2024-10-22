@@ -15,16 +15,18 @@ font_categories = {
     "My Favourites": ["poison", "smkeyboard", "fraktur", "mono12"]
 }
 
+# Precompute all available styles once at the start
+all_styles = [font for fonts in font_categories.values() for font in fonts]
+
 # List available categories and styles
 def list_categories():
     print(Fore.CYAN + "Available font categories:")
     for category, fonts in font_categories.items():
-        print(f"\n{Fore.GREEN}{category}:")
+        print(f"{Fore.GREEN}{category}:")
         print(", ".join(Fore.YELLOW + font for font in fonts))
         
-# Random font style choice
+# Random font style choice (uses precomputed 'all_styles')
 def get_random_style():
-    all_styles = [font for fonts in font_categories.values() for font in fonts]
     return random.choice(all_styles)
 
 # Font transformation
