@@ -1,6 +1,6 @@
 {
   "name": "terminal",
-  "version": "1.0.0",
+  "version": "16.13.0",
   "main": "server.js",
 "scripts": {
   "dev": "react-scripts start",
