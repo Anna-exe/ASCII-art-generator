@@ -1,7 +1,10 @@
 {
   "name": "terminal",
-  "version": "16.13.0",
+  "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "16.13.0"
+  },
 "scripts": {
   "dev": "react-scripts start",
   "start": "serve -s build",
