@@ -5,7 +5,7 @@ import random
 from colorama import Fore, Style, init
 
 # Initialize colorama
-init(autoreset=True, strip=False)
+init(autoreset=True)
 
 # Categorizing font styles
 font_categories = {
@@ -34,15 +34,14 @@ def apply_rainbow_gradient(text):
     return colored_text
 
 # Function to print messages with a typing effect
-def slow_print(text, color=Fore.WHITE, delay=0.05):
-    print(color, end="")  # Set the initial color
+def slow_print(text, delay=0.05):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
 
 # List available categories and styles
 def list_categories():
-    slow_print(Fore.CYAN + "Available font categories:\n")
+    slow_print("Available font categories:\n", Fore.CYAN)
     for category, fonts in font_categories.items():
         print(f"{Fore.GREEN}{category}:")
         print(", ".join(Fore.YELLOW + font for font in fonts))
@@ -70,9 +69,15 @@ def get_valid_style():
 def prompt_retry():
     return input(Fore.BLUE + "\nDo you want to try again? ('y' for yes or any other key to exit): ").lower() == 'y'
 
+def slow_print(text, color=Fore.WHITE, delay=0.05):
+    # Add color explicitly to each character to maintain color consistency
+    for char in text:
+        print(color + char, end='', flush=True)
+        time.sleep(delay)
+
 def main():
-    slow_print(Fore.CYAN + "Welcome to the ASCII Art Generator!")
-    slow_print(Fore.MAGENTA + "You can use it to add style to footer of your emails or as banners in forums\n")
+    slow_print("Welcome to the ASCII Art Generator!", Fore.CYAN)
+    slow_print("You can use it to add style to footer of your emails or as banners in forums\n", Fore.MAGENTA)
     
     while True:
         # List font categories at the beginning
@@ -84,25 +89,25 @@ def main():
         # Random font choice
         if style.lower() == 'random':
             style = get_random_style()
-            slow_print(Fore.CYAN + f"Randomly selected style: {style}")
+            slow_print(f"Randomly selected style: {style}", Fore.CYAN )
 
         # Then, user input for desired text
-        text = input(Fore.BLUE + "\nEnter the text you want to convert to ASCII art: ")
+        text = input("\nEnter the text you want to convert to ASCII art: ", Fore.BLUE)
 
         # Generate ASCII art and display it with a rainbow gradient
         try:
             ascii_art = generate_ascii_art(text, style)
-            slow_print(Fore.YELLOW + "\nGenerating the best ASCII art for you...\n")
+            slow_print("\nGenerating the best ASCII art for you...\n", Fore.YELLOW)
             
             # Apply rainbow gradient to the ASCII art
             rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
             print(rainbow_ascii_art)
-            slow_print(Fore.YELLOW + "***Hint: To display your ASCII art properly, use fonts with equal spacing like 'Fixed width' in Gmail or 'Miriam Fixed' in Word\n")
+            slow_print("***Hint: To display your ASCII art properly, use fonts with equal spacing like 'Fixed width' in Gmail or 'Miriam Fixed' in Word\n", Fore.YELLOW)
         except Exception as e:
-            slow_print(Fore.RED + f"An error occurred: {e}. Please make sure you entered a valid style.")
+            slow_print(f"An error occurred: {e}. Please make sure you entered a valid style.", Fore.RED)
 
         # Ask if the user wants to try again
         if not prompt_retry():
-            slow_print(Fore.GREEN + "\nThank you for using the ASCII Art Generator! Goodbye!")
+            slow_print("\nThank you for using the ASCII Art Generator! Goodbye!", Fore.GREEN )
             break
 main()
