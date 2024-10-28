@@ -38,6 +38,7 @@ def list_categories():
     for category, fonts in font_categories.items():
         print(f"{Fore.GREEN}{category}:")
         print(", ".join(Fore.YELLOW + font for font in fonts))
+        print() # Spacing between categories
         
 # Random font style choice (uses precomputed 'all_styles')
 def get_random_style():
