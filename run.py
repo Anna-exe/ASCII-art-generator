@@ -34,7 +34,8 @@ def apply_rainbow_gradient(text):
     return colored_text
 
 # Function to print messages with a typing effect
-def slow_print(text, delay=0.05):
+def slow_print(text, color=Fore.WHITE, delay=0.05):
+    print(color, end="")  # Set the initial color
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
