@@ -5,7 +5,7 @@ import random
 from colorama import Fore, Style, init
 
 # Initialize colorama
-init(autoreset=True)
+init(autoreset=True, strip=False)
 
 # Categorizing font styles
 font_categories = {
