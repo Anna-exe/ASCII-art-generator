@@ -34,7 +34,7 @@ def apply_rainbow_gradient(text):
 
 # List available categories and styles
 def list_categories():
-    print(Fore.CYAN + "Available font categories:")
+    print(Fore.CYAN + "Available font categories:\n")
     for category, fonts in font_categories.items():
         print(f"{Fore.GREEN}{category}:")
         print(", ".join(Fore.YELLOW + font for font in fonts))
@@ -55,7 +55,7 @@ def get_valid_style():
         style = input(Fore.BLUE + "Enter the style you want to use (or type 'random' for a random style): ")
         if style in all_styles + ['random']:
             return style
-        print(Fore.RED + "Invalid style. Available categories and styles are listed below:")
+        print(Fore.RED + "Invalid style. Available categories and styles are listed below:\n")
         list_categories()
 
 # Function to prompt the user to try again or exit
