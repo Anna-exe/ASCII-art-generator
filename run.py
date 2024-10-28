@@ -86,13 +86,12 @@ def main():
             # Apply rainbow gradient to the ASCII art
             rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
             print(rainbow_ascii_art)
-            print(Fore.YELLOW + "***Hint: To display your ASCII art properly, use fonts with equal amount of spaces between characters like 'Fixed width' in Gmail and 'Miriam Fixed' in Word")
-            
+            print(Fore.YELLOW + "***Hint: To display your ASCII art properly, use fonts with equal spacing like 'Fixed width' in Gmail or 'Miriam Fixed' in Word\n")
         except Exception as e:
             print(Fore.RED + f"An error occurred: {e}. Please make sure you entered a valid style.")
 
         # Ask if the user wants to try again
-        retry = input(Fore.BLUE + "Hope you liked it!\nDo you want to try again? ('y' or any other key to exit): ").lower()
+        retry = input(Fore.BLUE + "Hope you liked it!\nDo you want to try again? ('Y' or any other key to exit): ").lower()
         if retry != 'y':
             print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!")
             break
