@@ -58,6 +58,10 @@ def get_valid_style():
         print(Fore.RED + "Invalid style. Available categories and styles are listed below:")
         list_categories()
 
+# Function to prompt the user to try again or exit
+def prompt_retry():
+    return input(Fore.BLUE + "\nDo you want to try again? ('y' for yes or any other key to exit): ").lower() == 'y'
+
 def main():
     print(Fore.MAGENTA + """Welcome to the ASCII Art Generator!
     You can use it to add style to footer of your emails or as banners in forums
@@ -91,8 +95,7 @@ def main():
             print(Fore.RED + f"An error occurred: {e}. Please make sure you entered a valid style.")
 
         # Ask if the user wants to try again
-        retry = input(Fore.BLUE + "Hope you liked it!\nDo you want to try again? ('Y' or any other key to exit): ").lower()
-        if retry != 'y':
-            print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!")
+        if not prompt_retry():
+            print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!\n")
             break
 main()
