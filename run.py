@@ -41,7 +41,7 @@ def slow_print(text, delay=0.05):
 
 # List available categories and styles
 def list_categories():
-    slow_print("Available font categories:\n", Fore.CYAN)
+    print(Fore.CYAN + "Available font categories:\n")
     for category, fonts in font_categories.items():
         print(f"{Fore.GREEN}{category}:")
         print(", ".join(Fore.YELLOW + font for font in fonts))
@@ -62,7 +62,7 @@ def get_valid_style():
         style = input(Fore.BLUE + "Enter the style you want to use (or type 'random' for a random style): ")
         if style in all_styles + ['random']:
             return style
-        slow_print(Fore.RED + "Invalid style. Available categories and styles are listed below:\n")
+        slow_print("Invalid style. Available categories and styles are listed below:\n", Fore.RED)
         list_categories()
 
 # Function to prompt the user to try again or exit
@@ -76,7 +76,7 @@ def slow_print(text, color=Fore.WHITE, delay=0.05):
         time.sleep(delay)
 
 def main():
-    slow_print("Welcome to the ASCII Art Generator!", Fore.CYAN)
+    slow_print("Welcome to the ASCII Art Generator!\n", Fore.CYAN)
     slow_print("You can use it to add style to footer of your emails or as banners in forums\n", Fore.MAGENTA)
     
     while True:
@@ -92,7 +92,7 @@ def main():
             slow_print(f"Randomly selected style: {style}", Fore.CYAN )
 
         # Then, user input for desired text
-        text = input("\nEnter the text you want to convert to ASCII art: ", Fore.BLUE)
+        text = input("\nEnter the text you want to convert to ASCII art:\n")
 
         # Generate ASCII art and display it with a rainbow gradient
         try:
@@ -102,6 +102,7 @@ def main():
             # Apply rainbow gradient to the ASCII art
             rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
             print(rainbow_ascii_art)
+            slow_print("Hope you liked it!", Fore.GREEN)
             slow_print("***Hint: To display your ASCII art properly, use fonts with equal spacing like 'Fixed width' in Gmail or 'Miriam Fixed' in Word\n", Fore.YELLOW)
         except Exception as e:
             slow_print(f"An error occurred: {e}. Please make sure you entered a valid style.", Fore.RED)
