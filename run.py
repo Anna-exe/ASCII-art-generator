@@ -95,6 +95,6 @@ def main():
 
         # Ask if the user wants to try again
         if not prompt_retry():
-            print(Fore.GREEN + "Thank you for using the ASCII Art Generator! Goodbye!\n")
+            print(Fore.GREEN + "\nThank you for using the ASCII Art Generator! Goodbye!")
             break
 main()
