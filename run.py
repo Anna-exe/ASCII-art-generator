@@ -1,4 +1,5 @@
 # Import of libraries
+import time
 import pyfiglet
 import random
 from colorama import Fore, Style, init
