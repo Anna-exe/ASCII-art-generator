@@ -50,8 +50,8 @@ This ASCII text art generator is a simple tool designed to transform standard te
 
 ### Features
 * Colored text
-    - To increase the readability of console content I've implemented a color on text messages.
-    - The error messages are colored red so that user can understand that something is not right.
+    - To increase the readability of console content I've implemented a color on text messages
+    - The error messages are colored red so that user can understand that something is not right
     ![Screenshot of color feature](/assets/images/color-feature.jpg)
 
 * Providing categories of font styles
@@ -60,5 +60,19 @@ This ASCII text art generator is a simple tool designed to transform standard te
 
 * Desired text input
     - Ask for users desired text that will be transformed into ASCII art
-    - If user input is empty, app will return an error message asking for valid input again
+    - Any characters are allowed, but if user input is empty, app will return an error message asking for valid input again
     ![Screenshot of desired text input feature](/assets/images/text-feat.jpg)
+
+* Generated art
+    - After users enter a valid input, their digital text art is generated in rainbow colors
+    ![Screenshot of generated art feature](/assets/images/generated-art-feat.jpg)
+    - I added a little feedback message that expresses a hope that users are happy with generated art
+
+* Hint message
+    - I implemented a hint message that explains to user how to paste the text art to other platforms so it doesn't distort.
+    ![Screenshot of hint message](/assets/images/hint-msg.jpg)
+
+* Choice to repeat the process or exit the console
+    - Providing choice to users if they want to repeat the process or they are happy to exit the console
+    - If user input is anything but "y" - provide a goodbye message. Otherwise, the app will start from the beginning.
+    ![Screenshot of last feature](/assets/images/goodbye-msg.jpg)
