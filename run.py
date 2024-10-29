@@ -1,7 +1,8 @@
 # Import of libraries
+import sys
+import random
 import time
 import pyfiglet
-import random
 from colorama import Fore, Style, init
 
 # Initialize colorama
@@ -134,7 +135,7 @@ in Gmail or 'Miriam Fixed' in Word""",
         # Ask if the user wants to try again
         if not prompt_retry():
             slow_print("\nThank you for using the ASCII Art Generator! Goodbye!", Fore.GREEN)
-            exit()
+            sys.exit()
 
 
 main()
