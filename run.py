@@ -19,6 +19,14 @@ font_categories = {
 # Precompute all available styles once at the start
 all_styles = [font for fonts in font_categories.values() for font in fonts]
 
+#Get valid text from user
+def get_text_input():
+    while True:
+        text = input("\nEnter the text you want to convert to ASCII art:\n")
+        if text.strip():  # Check if input is not empty after stripping whitespace
+            return text
+        slow_print("Error: Please enter some text to generate ASCII art.\n", Fore.RED)
+
 # Define rainbow colors in sequence
 rainbow_colors = [Fore.RED, Fore.YELLOW, Fore.GREEN, Fore.CYAN, Fore.BLUE, Fore.MAGENTA]
 
@@ -92,7 +100,7 @@ def main():
             slow_print(f"Randomly selected style: {style}", Fore.CYAN )
 
         # Then, user input for desired text
-        text = input("\nEnter the text you want to convert to ASCII art:\n")
+        text = get_text_input()
 
         # Generate ASCII art and display it with a rainbow gradient
         try:
