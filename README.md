@@ -76,3 +76,10 @@ This ASCII text art generator is a simple tool designed to transform standard te
     - Providing choice to users if they want to repeat the process or they are happy to exit the console
     - If user input is anything but "y" - provide a goodbye message. Otherwise, the app will start from the beginning.
     ![Screenshot of last feature](/assets/images/goodbye-msg.jpg)
+
+### Future enhancements
+* I would like to implement feature that allows user to choose the color of text art
+
+* Also, for some users the slowly printing messages might be annoying, so to speed up the process, I would like user to have an option to press the "Enter" key or mouse button that will stop slow-print function and display the printed message fully.
+
+* To make a digital art from uploaded pictures
