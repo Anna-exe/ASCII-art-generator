@@ -51,4 +51,15 @@ Which gave me a result of 7.18 out of  10
 
 - Error: *Unused Style imported from colorama*
     - Removed an unused "style" module
+
+- Error: *C0114: Missing module docstring*
+    - The error wasn't related to line 114, but to the whole code.
+    Fixed error by adding a descriptive docstring at the beginning of python code about all modules and functions.
+
+- Error: *run.py:155:15: W0718: Catching too general exception Exception*
+    - Replaced too general "Exception" with more specific exeption "TypeError"
+
+After resolving all errors noted by pylint, my score now is 10/10
+![Screenshot of pylint result 2](/assets/images/pylint-report2.jpg)
+
 ## **Unfixed Bugs**
