@@ -52,4 +52,13 @@ This ASCII text art generator is a simple tool designed to transform standard te
 * Colored text
     - To increase the readability of console content I've implemented a color on text messages.
     - The error messages are colored red so that user can understand that something is not right.
-    ![Screenshot of color feature]()
+    ![Screenshot of color feature](/assets/images/color-feature.jpg)
+
+* Providing categories of font styles
+    - Users can choose font from a list or it can be chosen randomly by the application
+    ![Screenshot of categories choice feature](/assets/images/categories-feat.jpg)
+
+* Desired text input
+    - Ask for users desired text that will be transformed into ASCII art
+    - If user input is empty, app will return an error message asking for valid input again
+    ![Screenshot of desired text input feature](/assets/images/text-feat.jpg)
