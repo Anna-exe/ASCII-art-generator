@@ -31,4 +31,11 @@ pylint run.py
 Which gave me a result of 7.18 out of  10
 ![Screenshot of pylint score](/assets/images/pylint-report1.jpg)
 
+- Error: missing module docstring
+    - My functions were commented with an inline comments. Fixed the the errors by changing inline comments into docstrings
+- Error: Line too long
+    - The hint message was too long, so I wrapped it into multiline string.
+    After that, the hint message printed with identation, but I found out that it can be fixed just by removing any identation from a multiline string.
+- Error: Function already defined
+    - removed the duplicate of slow_print() function
 ## **Unfixed Bugs**
