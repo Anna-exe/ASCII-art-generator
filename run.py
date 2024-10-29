@@ -46,10 +46,11 @@ def apply_rainbow_gradient(text):
     return colored_text
 
 
-def slow_print(text, delay=0.05):
-    """Print messages with a typing effect"""
+def slow_print(text, color=Fore.WHITE, delay=0.05):
+    """Print messages with typing effect"""
+    # Add color explicitly to each character to maintain color consistency
     for char in text:
-        print(char, end="", flush=True)
+        print(color + char, end="", flush=True)
         time.sleep(delay)
 
 
@@ -91,14 +92,7 @@ def prompt_retry():
             Fore.BLUE + "\nDo you want to try again? ('y' for yes or any other key to exit): "
         ).lower() == "y"
     )
-
-
-def slow_print(text, color=Fore.WHITE, delay=0.05):
-    # Add color explicitly to each character to maintain color consistency
-    for char in text:
-        print(color + char, end="", flush=True)
-        time.sleep(delay)
-
+    
 
 def main():
     """Main function"""
