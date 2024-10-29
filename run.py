@@ -1,3 +1,27 @@
+"""
+ASCII Art Generator
+
+This script allows users to generate ASCII art using various font styles
+and display options. It includes features like color gradient application
+and random font selection.
+
+Modules:
+- time
+- pyfiglet
+- random
+- colorama
+
+Functions:
+- apply_rainbow_gradient: Applies rainbow colors to text.
+- slow_print: Prints text with a typing effect.
+- list_categories: Lists available font categories.
+- get_random_style: Chooses a random font style.
+- generate_ascii_art: Transforms text into ASCII art.
+- get_valid_style: Validates user-selected style.
+- prompt_retry: Prompts user to try again or exit.
+- main: The main function that runs the ASCII Art Generator program.
+"""
+
 # Import of libraries
 import sys
 import random
