@@ -152,7 +152,7 @@ def main():
 use fonts with equal spacing like 'Fixed width'
 in Gmail or 'Miriam Fixed' in Word""",
             Fore.YELLOW)
-        except Exception as e:
+        except TypeError as e:
             slow_print(f"""An error occurred: {e}.
             Please make sure you entered a valid style.""", Fore.RED)
 

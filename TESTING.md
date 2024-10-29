@@ -23,6 +23,7 @@ python3 run.py
 The PEP8 style guide was used to check the code for any formatting errors or issues. The code was tested using the [PEP8CI tool](https://pep8ci.herokuapp.com/#) to ensure it follows Python's best practices.
 No major errors found in PEP8 validator:
 ![Screenshot of PEP8 result](/assets/images/p8-report.jpg)
+
 ### Pylint rating
 To check my codes score with pylint validator, I ran a command:
 ```Bash
