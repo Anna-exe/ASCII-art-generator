@@ -116,5 +116,7 @@ For deployment, this project leverages Heroku's platform, which makes it simple 
 This deployment process ensures your application runs smoothly in a web-based environment hosted on Heroku.
 
 ## Credits
-- **Version Control**
-    - [GitHub](https://github.com) Used for version control and repository management.
+- [GitHub](https://github.com) Used for version control and repository management.
+- [Pyfiglet](https://pypi.org/project/pyfiglet/) Library used to create text art
+- [Google](google.com) Used throughout the project for various questions
+- [Slack](https://app.slack.com/) Found support from fellow students
