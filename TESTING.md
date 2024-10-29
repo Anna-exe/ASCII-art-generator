@@ -47,4 +47,7 @@ Which gave me a result of 7.18 out of  10
 
 - Error: *standard import "random" should be placed before third party import "pyfiglet"*
     - Reordered import of libraries
+
+- Error: *Unused Style imported from colorama*
+    - Removed an unused "style" module
 ## **Unfixed Bugs**

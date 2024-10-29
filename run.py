@@ -3,7 +3,7 @@ import sys
 import random
 import time
 import pyfiglet
-from colorama import Fore, Style, init
+from colorama import Fore, init
 
 # Initialize colorama
 init(autoreset=True)
