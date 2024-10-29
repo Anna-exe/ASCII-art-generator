@@ -33,12 +33,12 @@ Which gave me a result of 7.18 out of  10
 ![Screenshot of pylint score](/assets/images/pylint-report1.jpg)
 
 - Error: *Missing module docstring*
-    - My functions were commented with an inline comments. Fixed the the errors by changing inline comments into docstrings
+    - My functions were commented with inline comments. Fixed the the errors by changing inline comments into docstrings
 
 - Error: *Line too long*
-    - The hint message was too long, so I wrapped it into multiline string.
+    - The hint message was too long, so I wrapped it into a multiline string.
     ![Screenshot of multiline string result](/assets/images/identation-issue.jpg)
-    After that, the hint message printed with identation, but I found out that it can be fixed just by removing any identation from a multiline string up to the very beginning of line in code.
+    After that, the hint message printed with indentation, but I found out that it can be fixed just by removing any indentation from a multiline string up to the very beginning of line in code.
 
 - Error: *Function already defined*
     - removed the duplicate of slow_print() function
@@ -57,9 +57,16 @@ Which gave me a result of 7.18 out of  10
     Fixed error by adding a descriptive docstring at the beginning of python code about all modules and functions.
 
 - Error: *run.py:155:15: W0718: Catching too general exception Exception*
-    - Replaced too general "Exception" with more specific exeption "TypeError"
+    - Replaced too general "Exception" with more specific exception "TypeError"
 
 After resolving all errors noted by pylint, my score now is 10/10
+
 ![Screenshot of pylint result 2](/assets/images/pylint-report2.jpg)
 
 ## **Unfixed Bugs**
+- There is an issue if user is pressing the "Enter" key:
+
+![Screenshot with unfixed bug](/assets/images/unfixed-bug.jpg)
+
+    The print messages are returning on a new line, and, if pressed continuously, the app crashes and doesn't react at all.
+    Might fix it by blocking the app from any input before messages are fully printed, but I am short of time now.
