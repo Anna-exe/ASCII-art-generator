@@ -92,7 +92,7 @@ def prompt_retry():
             Fore.BLUE + "\nDo you want to try again? ('y' for yes or any other key to exit): "
         ).lower() == "y"
     )
-    
+
 
 def main():
     """Main function"""
@@ -134,7 +134,7 @@ in Gmail or 'Miriam Fixed' in Word""",
         # Ask if the user wants to try again
         if not prompt_retry():
             slow_print("\nThank you for using the ASCII Art Generator! Goodbye!", Fore.GREEN)
-            break
+            exit()
 
 
 main()
