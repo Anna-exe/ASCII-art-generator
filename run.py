@@ -135,7 +135,8 @@ def main():
                 in Gmail or 'Miriam Fixed' in Word
                 """, Fore.YELLOW)
         except Exception as e:
-            slow_print(f"An error occurred: {e}. Please make sure you entered a valid style.", Fore.RED)
+            slow_print(f"""An error occurred: {e}.
+            Please make sure you entered a valid style.""", Fore.RED)
 
         # Ask if the user wants to try again
         if not prompt_retry():
