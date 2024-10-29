@@ -13,34 +13,34 @@ This ASCII text art generator is a simple tool designed to transform standard te
 * [**Testing Phase**](#testing-phase)
 * [**Deployment**](#deployment)
 * [**Credits**](#credits)
-* [**Forking the GitHub Repository**](#forking-the-gitHub-repository)
-* [**Local Clone**](#local-clone)
 
-### User experience
-* Website goal:
-    - Create an ASCII text art generator that offers a tool that can add visual, digital-style appeal to practical applications, business or design needs.
+## User experience
+### **Website goal:**
+    Create an ASCII text art generator that offers a tool that can add visual, digital-style appeal to practical applications, business or design needs.
 
-* Target audiences:
+- **Target audiences:**
     - Individuals interested in creative digital expressions, including ASCII and text-based art, who want to generate custom designs for online art projects, websites, and social media posts.
-    - Developers and Programmers:
+    - **Developers and Programmers:**
         - People looking for fun or retro-style visuals for use in CLI tools, terminal banners, or readme files on GitHub to add a unique touch to their projects.
 
-    - Social Media Enthusiasts:
+    - **Social Media Enthusiasts:**
         - Users who want eye-catching headers, posts, or signature blocks in forums, chat platforms, and social media profiles for added personality and flair.
     
-    - Bloggers and Content Creators:
+    - **Bloggers and Content Creators:**
         - Writers and bloggers seeking creative visual elements for blog posts, newsletters, or personal branding to make their content more engaging and memorable.
 
-    - Teachers and Educators:
+    - **Teachers and Educators:**
         - Educators who can use ASCII art in educational resources, coding lessons, or tutorials, especially in introducing text-based art to students in programming or design.
-    - Marketing Professionals:
+    - **Marketing Professionals:**
         - Marketing teams looking for unique, low-cost ways to create memorable visual assets for email footers, promotional banners, or digital flyers.
-    - Retro Enthusiasts and Gamers:
+
+    - **Retro Enthusiasts and Gamers:**
         - Fans of vintage aesthetics and retro gaming who enjoy recreating the feel of classic computer graphics or early digital culture art for use in online communities, game forums, and personal projects.
-    - Hobbyists and DIY Creators:
+
+    - **Hobbyists and DIY Creators:**
         - Individuals who enjoy experimenting with text art in DIY projects, such as creating ASCII-inspired home décor, t-shirt designs, or printed art.
 
-* As a user, I would expect:
+### As a user, I would expect:
     - Understanding what is the goal of the website from first seconds
     - Design that would please the eye
     - Understand what action is required from me
@@ -48,7 +48,7 @@ This ASCII text art generator is a simple tool designed to transform standard te
     - Receive a feedback messages on every input
     - Option to restart the generator and get a new transformed text
 
-### Features
+## Features
 * Colored text
     - To increase the readability of console content I've implemented a color on text messages
     - The error messages are colored red so that user can understand that something is not right
@@ -85,5 +85,36 @@ This ASCII text art generator is a simple tool designed to transform standard te
 
 * To make a digital art from uploaded pictures
 
-### Testing phase
+## Testing phase
 * Please find all details in [Testing page](/TESTING.md)
+
+## Deployment
+
+For deployment, this project leverages Heroku's platform, which makes it simple to host and run terminal-based Python applications in the cloud. Here’s a guide for manually deploying your project to Heroku using a GitHub repository:
+
+### Deployment Steps:
+
+- **1. Create a Heroku Account**
+    - Visit [Heroku](https://dashboard.heroku.com/) and sign up for an account.
+
+- **2. Create a New App**
+    - Go to the Heroku dashboard and click **new**.
+    - On the dropdown click **Create new app**.
+    - Provide a unique app name and select your region then click **Create app**.
+
+- **3. Add Buildpacks**
+    - In the **Settings** tab, click **Add buildpack**.
+    - Select **Python** and **Node.js** (if needed), ensuring that Python is listed first.
+
+- **4. Connect to GitHub**
+    - In the **Deploy** tab, choose **GitHub** as the deployment method.
+    - Search for your repository and connect it to Heroku.
+
+- **5. Manual or Automatic Deploy**
+    - Enable **Automatic Deploys** for Heroku to update the app with every push to GitHub, or use the **Manual Deploy** option to deploy the main branch manually.
+
+This deployment process ensures your application runs smoothly in a web-based environment hosted on Heroku.
+
+## Credits
+- **Version Control**
+    - [GitHub](https://github.com) Used for version control and repository management.
