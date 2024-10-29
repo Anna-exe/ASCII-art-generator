@@ -20,8 +20,15 @@ python3 run.py
 
 ## **Post Development Testing**
 ### PEP8 Code Validation
-    - The PEP8 style guide was used to check the code for any formatting errors or issues. The code was tested using the [PEP8CI tool](https://pep8ci.herokuapp.com/#) to ensure it follows Python's best practices.
-    No major errors found in PEP8 validator:
-    ![Screenshot of PEP8 result](/assets/images/p8-report.jpg)
+The PEP8 style guide was used to check the code for any formatting errors or issues. The code was tested using the [PEP8CI tool](https://pep8ci.herokuapp.com/#) to ensure it follows Python's best practices.
+No major errors found in PEP8 validator:
+![Screenshot of PEP8 result](/assets/images/p8-report.jpg)
+### Pylint rating
+To check my codes score with pylint validator, I ran a command:
+```Bash
+pylint run.py
+```
+Which gave me a result of 7.18 out of  10
+![Screenshot of pylint score](/assets/images/pylint-report1.jpg)
 
 ## **Unfixed Bugs**
