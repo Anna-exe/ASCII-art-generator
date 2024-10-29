@@ -10,8 +10,8 @@ This ASCII text art generator is a simple tool designed to transform standard te
 * [**User Experience**](#user-experience)
 * [**Features**](#features)
 * [**Future Enhancements**](#future-enhancements)
-* [**Deployment**](#deployment)
 * [**Testing Phase**](#testing-phase)
+* [**Deployment**](#deployment)
 * [**Credits**](#credits)
 * [**Forking the GitHub Repository**](#forking-the-gitHub-repository)
 * [**Local Clone**](#local-clone)
@@ -78,8 +78,12 @@ This ASCII text art generator is a simple tool designed to transform standard te
     ![Screenshot of last feature](/assets/images/goodbye-msg.jpg)
 
 ### Future enhancements
+
 * I would like to implement feature that allows user to choose the color of text art
 
 * Also, for some users the slowly printing messages might be annoying, so to speed up the process, I would like user to have an option to press the "Enter" key or mouse button that will stop slow-print function and display the printed message fully.
 
 * To make a digital art from uploaded pictures
+
+### Testing phase
+* Please find all details in [Testing page](/TESTING.md)
