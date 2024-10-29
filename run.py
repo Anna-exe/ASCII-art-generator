@@ -102,7 +102,7 @@ def main():
             # Apply rainbow gradient to the ASCII art
             rainbow_ascii_art = apply_rainbow_gradient(ascii_art)
             print(rainbow_ascii_art)
-            slow_print("Hope you liked it!", Fore.GREEN)
+            slow_print("Hope you liked it!\n", Fore.GREEN)
             slow_print("***Hint: To display your ASCII art properly, use fonts with equal spacing like 'Fixed width' in Gmail or 'Miriam Fixed' in Word\n", Fore.YELLOW)
         except Exception as e:
             slow_print(f"An error occurred: {e}. Please make sure you entered a valid style.", Fore.RED)
