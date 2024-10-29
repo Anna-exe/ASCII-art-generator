@@ -20,8 +20,8 @@ font_categories = {
 all_styles = [font for fonts in font_categories.values() for font in fonts]
 
 
-# Get valid text from user
 def get_text_input():
+    """Get valid text from user"""
     while True:
         text = input("\nEnter the text you want to convert to ASCII art:\n")
         # Check if input is not empty after stripping whitespace
@@ -34,8 +34,8 @@ def get_text_input():
 rainbow_colors = [Fore.RED, Fore.YELLOW, Fore.GREEN, Fore.CYAN, Fore.BLUE, Fore.MAGENTA]
 
 
-# Function to apply rainbow colors to text
 def apply_rainbow_gradient(text):
+    """Apply rainbow colors to text"""
     colored_text = ""
     color_count = len(rainbow_colors)
 
@@ -46,15 +46,15 @@ def apply_rainbow_gradient(text):
     return colored_text
 
 
-# Function to print messages with a typing effect
 def slow_print(text, delay=0.05):
+    """Print messages with a typing effect"""
     for char in text:
         print(char, end="", flush=True)
         time.sleep(delay)
 
 
-# List available categories and styles
 def list_categories():
+    """List available categories and styles"""
     print(Fore.CYAN + "Available font categories:\n")
     for category, fonts in font_categories.items():
         print(f"{Fore.GREEN}{category}:")
@@ -62,19 +62,19 @@ def list_categories():
         print()  # Spacing between categories
 
 
-# Random font style choice (uses precomputed 'all_styles')
 def get_random_style():
+    """Random font style choice (uses precomputed 'all_styles')"""
     return random.choice(all_styles)
 
 
-# Font transformation
 def generate_ascii_art(text, style):
+    """Font transformation"""
     fig = pyfiglet.Figlet(font=style)
     return fig.renderText(text)
 
 
-# Get valid font style input (uses precomputed 'all_styles')
 def get_valid_style():
+    """Get valid font style input (uses precomputed 'all_styles')"""
     while True:
         style = input(
             Fore.BLUE + "Enter the style you want to use (or type 'random' for a random style): ")
@@ -84,8 +84,8 @@ def get_valid_style():
         list_categories()
 
 
-# Function to prompt the user to try again or exit
 def prompt_retry():
+    """Prompt the user to try again or exit"""
     return (
         input(
             Fore.BLUE + "\nDo you want to try again? ('y' for yes or any other key to exit): "
@@ -101,6 +101,7 @@ def slow_print(text, color=Fore.WHITE, delay=0.05):
 
 
 def main():
+    """Main function"""
     slow_print("Welcome to the ASCII Art Generator!\n", Fore.CYAN)
     slow_print("You can use it to add style to your digital designs\n", Fore.MAGENTA)
 
