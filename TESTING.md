@@ -41,4 +41,10 @@ Which gave me a result of 7.18 out of  10
 
 - Error: *Function already defined*
     - removed the duplicate of slow_print() function
+
+- Error: *Too general exeption*
+    - Replaced "break" with sys.exit() function
+
+- Error: *standard import "random" should be placed before third party import "pyfiglet"*
+    - Reordered import of libraries
 ## **Unfixed Bugs**
