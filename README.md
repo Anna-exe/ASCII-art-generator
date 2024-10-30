@@ -84,7 +84,7 @@ This ASCII text art generator is a simple tool designed to transform standard te
 * To make a digital art from uploaded pictures
 
 ## Testing phase
-* Please find all details in [Testing page](/TESTING.md)
+Please find all details in [Testing page](/TESTING.md)
 
 ## Deployment
 
@@ -124,6 +124,9 @@ This deployment process ensures your application runs smoothly in a web-based en
 
 ## Personal Contribution and Experience
 The idea of project came to me from the very start of development.
+
 Hyperskill was a great platform that helped me to secure my knowledge of Python
+
 Sometimes, when I couldn't find an answer in Google, I used Microsoft AI Copilot to give me some tips.
+
 An example of that would be the debbugging process, when I was struggling to deploy my project on Heroku.
