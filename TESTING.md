@@ -18,6 +18,19 @@ python3 run.py
 
 ### **Bugs and fixes**
 
+- I was struggling to set up the project on Heroku's platform
+    - Reached out to Google, Slack, and Copilot AI
+    - Watched the Love Sanwiches example project throughout to find all the required steps
+    - Reached out to online tutoring
+
+Eventually, I realised that I didn't installed the Config Variables in Heroku's settings
+![Screenshot of Config Vars](/assets/images/config-vars.jpg)
+
+Also, my requirements.txt file contents had to be secured with command:
+```Bash
+pip freeze > requirements.txt
+```
+
 ## **Post Development Testing**
 ### PEP8 Code Validation
 The PEP8 style guide was used to check the code for any formatting errors or issues. The code was tested using the [PEP8CI tool](https://pep8ci.herokuapp.com/#) to ensure it follows Python's best practices.
