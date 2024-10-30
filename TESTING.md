@@ -3,7 +3,8 @@
     * [Manual Testing](#manual-testing)
     * [Bugs and Fixes](#bugs-and-fixes)
 * [**Post Development Testing**](#post-development-testing)
-
+    * [PEP8 Code Validation](#pep8-code-validation)
+    * [Pylint rating](#pylint-rating)
 * [**Unfixed Bugs**](#unfixed-bugs)
 
 
@@ -20,16 +21,17 @@ python3 run.py
 
 - I was struggling to set up the project on Heroku's platform
     - Reached out to Google, Slack, and Copilot AI
-    - Watched the Love Sanwiches example project throughout to find all the required steps
+    - Watched the Love Sandwiches example project throughout to find all the required steps
     - Reached out to online tutoring
 
-Eventually, I realised that I didn't installed the Config Variables in Heroku's settings
-![Screenshot of Config Vars](/assets/images/config-vars.jpg)
+* Nothing helped, and, eventually, I realised that I had two issues:
+    - I didn't installed the Config Variables in Heroku's settings
+    ![Screenshot of Config Vars](/assets/images/config-vars.jpg)
 
-Also, my requirements.txt file contents had to be secured with command:
-```Bash
-pip freeze > requirements.txt
-```
+    - Also, my requirements.txt file contents had to be secured with command:
+    ```Bash
+    pip freeze > requirements.txt
+    ```
 
 ## **Post Development Testing**
 ### PEP8 Code Validation
@@ -81,5 +83,5 @@ After resolving all errors noted by pylint, my score now is 10/10
 
 ![Screenshot with unfixed bug](/assets/images/unfixed-bug.jpg)
 
-    The print messages are returning on a new line, and, if pressed continuously, the app crashes and doesn't react at all.
+    The print messages are returning on a new line, and, if pressed repeatedly, the app crashes and doesn't react at all.
     Might fix it by blocking the app from any input before messages are fully printed, but I am short of time now.
