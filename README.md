@@ -119,4 +119,13 @@ This deployment process ensures your application runs smoothly in a web-based en
 - [GitHub](https://github.com) Used for version control and repository management.
 - [Pyfiglet](https://pypi.org/project/pyfiglet/) Library used to create text art
 - [Google](google.com) Used throughout the project for various questions
-- [Slack](https://app.slack.com/) Found support from fellow students
+- [Slack](https://app.slack.com/) Support from fellow students
+- [Heroku](heroku.com) Platform to deploy Python project
+- [Hyperskill](hyperskill.org) To secure the knowledge of Python
+- [Copilot](https://copilot.microsoft.com/) Helped me to unstuck from some issues
+
+## Personal Contribution and Experience
+The idea of project came to me from the very start of development.
+Hyperskill was a great platform that helped me to secure my knowledge of Python
+Sometimes, when I couldn't find an answer in Google, I used Microsoft AI Copilot to give me some tips.
+An example of that would be the debbugging process, when I was struggling to deploy my project on Heroku.
